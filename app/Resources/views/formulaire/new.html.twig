@@ -1,0 +1,272 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formulaire creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('formulaire_index') }}">Back to the list</a>
+        </li>
+    </ul>
+
+    <div id="hrtop" class="hrtop"><div class="arf"></div><div class="progress" style="width: 0%;"></div></div>
+
+    <header>
+
+        <div id="submenu" class="submenu  ">
+
+            <ul class="submenu-list"><li class="item " id="submenu-tutoriels"><span><a href="/tutoriels/">Tutoriels et astuces</a></span></li><li class="item " id="submenu-outils"><span><a href="/outils/">Outils</a></span></li><li class="item " id="submenu-livres"><span><a href="/livres/">Livres</a></span></li><li class="item active" id="submenu-quiz"><span><a href="/quiz/">Quiz</a></span></li></ul>    <form id="search" class="site-search" role="search" action="/search/" method="post">
+                <div class="search-rb">
+                    <label for="search-q" class="visuallyhidden">Rechercher</label>
+                    <i aria-hidden="true" class="icon-search"></i>
+                    <input id="search-q" class="search-q" name="q" placeholder="Tutoriel, propriété css..." value="" type="text">
+                </div>
+                <input class="search-submit awesome" value="OK" name="recherche-submit" type="submit">
+            </form>
+
+        </div>
+        <!-- /submenu -->
+
+
+    </header>
+
+    <!-- /navigation et sous-navigation -->
+
+
+    <div id="wtf" class="alsa-wtf" style="" aria-hidden="false">
+        <p>Bienvenue&nbsp;! Ingecole est une communauté dédiée à l'apprentissage des standards web (HTML, CSS, JavaScript, PHP, SYMFONY ), du design et de l'accessibilité numérique. Vous y trouverez tutoriels, forum, et bien d'autres choses. <a href="https://ingecole.fr" style="text-decoration: underline;">Créez votre profil</a> en quelques secondes pour participer&nbsp;!</p>
+        <a href="#" class="notif-close" title="Ne plus voir ce message" aria-controls="wtf"><i aria-hidden="true" class="icon-cancel-circled-outline"></i> Masquer</a>
+    </div>
+
+
+    <div id="global" class="site-global">
+
+        <div id="page" class="site-page">
+            <div class="content" role="main">
+
+                <h2>Quiz PHP débutant</h2>
+
+                <form method="post" action="/quiz/resultat/12" class="lecture">
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>1</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Que signifie PHP&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[0]" value="1" id="q0r1"> <label for="q0r1">Page Helper Process</label></li><li><input type="radio" name="rep[0]" value="2" id="q0r2"> <label for="q0r2">Programming Home Pages</label></li><li><input type="radio" name="rep[0]" value="3" id="q0r3"> <label for="q0r3">PHP: Hypertext Preprocessor</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>2</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Quelle fonction retourne la longueur d'une chaîne de texte&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[1]" value="1" id="q1r1"> <label for="q1r1">strlen</label></li><li><input type="radio" name="rep[1]" value="2" id="q1r2"> <label for="q1r2">strlength</label></li><li><input type="radio" name="rep[1]" value="3" id="q1r3"> <label for="q1r3">length</label></li><li><input type="radio" name="rep[1]" value="4" id="q1r4"> <label for="q1r4">substr</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>3</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Comment accède-t-on au 1er élément chaton dans le tableau suivant : $tableau = Array('chaton' , 'ornithorynque', 'dauphin');&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[2]" value="1" id="q2r1"> <label for="q2r1">$tableau[1]</label></li><li><input type="radio" name="rep[2]" value="2" id="q2r2"> <label for="q2r2">$tableau[0]</label></li><li><input type="radio" name="rep[2]" value="3" id="q2r3"> <label for="q2r3">$tableau{0}</label></li><li><input type="radio" name="rep[2]" value="4" id="q2r4"> <label for="q2r4">$tableau.get(1)</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>4</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Comment vérifie-t-on l'égalité de deux variables : $a et $b&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[3]" value="1" id="q3r1"> <label for="q3r1">$a = $b</label></li><li><input type="radio" name="rep[3]" value="2" id="q3r2"> <label for="q3r2">$a == $b</label></li><li><input type="radio" name="rep[3]" value="3" id="q3r3"> <label for="q3r3">$a != $b</label></li><li><input type="radio" name="rep[3]" value="4" id="q3r4"> <label for="q3r4">if($a,$b)</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>5</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Quelle est l'utilité de l'opérateur ||&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[4]" value="1" id="q4r1"> <label for="q4r1">Il sert à vérifier que toutes les conditions sont réalisées.</label></li><li><input type="radio" name="rep[4]" value="2" id="q4r2"> <label for="q4r2">Il sert à vérifier qu'une, et une seule, des conditions est réalisée.</label></li><li><input type="radio" name="rep[4]" value="3" id="q4r3"> <label for="q4r3">Il sert à vérifier qu'une, au moins, des conditions est réalisée.</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>6</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Quelles valeurs peut prendre le type booléen&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[5]" value="1" id="q5r1"> <label for="q5r1">0 ou 1</label></li><li><input type="radio" name="rep[5]" value="2" id="q5r2"> <label for="q5r2">TRUE ou FALSE</label></li><li><input type="radio" name="rep[5]" value="3" id="q5r3"> <label for="q5r3">Toutes sauf NULL</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>7</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">La boucle for ($i=0 ; $i&lt;=3 ; $i++ ) { echo $i; }...</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[6]" value="1" id="q6r1"> <label for="q6r1">Sera éxécutée 2 fois</label></li><li><input type="radio" name="rep[6]" value="2" id="q6r2"> <label for="q6r2">Sera éxécutée 3 fois</label></li><li><input type="radio" name="rep[6]" value="3" id="q6r3"> <label for="q6r3">Sera éxécutée 4 fois</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>8</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Sachant que $a = 4. Quelle instruction affiche : 4 = quatre&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[7]" value="1" id="q7r1"> <label for="q7r1">echo '$a = quatre';</label></li><li><input type="radio" name="rep[7]" value="2" id="q7r2"> <label for="q7r2">echo '$a = 2+2';</label></li><li><input type="radio" name="rep[7]" value="3" id="q7r3"> <label for="q7r3">echo "$a = quatre";</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>9</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Sachant que $dodo = 6. Quelle est la valeur de ma nuit : $dodo += 2;&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[8]" value="1" id="q8r1"> <label for="q8r1">3</label></li><li><input type="radio" name="rep[8]" value="2" id="q8r2"> <label for="q8r2">8</label></li><li><input type="radio" name="rep[8]" value="3" id="q8r3"> <label for="q8r3">12</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <div class="quiz-question">
+
+                        <div class="quiz-numero"><span>10</span></div>
+
+                        <div class="quiz-txt">
+
+                            <p class="quiz-intitule">Dans le cas d'envoi d'informations plus ou moins sensibles par formulaire, quelle méthode utilisera-t-on de préférence&nbsp;?</p>
+
+                            <div class="quiz-choix">
+                                <ul>
+                                    <li><input type="radio" name="rep[9]" value="1" id="q9r1"> <label for="q9r1">get</label></li><li><input type="radio" name="rep[9]" value="2" id="q9r2"> <label for="q9r2">mailto</label></li><li><input type="radio" name="rep[9]" value="3" id="q9r3"> <label for="q9r3">post</label></li>        </ul>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- quiz-question -->
+
+
+                    <p class="center quiz-submit"><input type="submit" value="Valider les réponses" class="awesome orange large"></p>
+
+                </form>
+
+            </div> <!-- .content -->
+
+
+        </div> <!-- #page -->
+
+
+    </div><!-- #global -->
+
+    <footer id="footer-menu" class="site-footer-menu">
+
+    </footer>
+
+    <!-- Footer-end : logo, presentation -->
+    <div id="footer-end" class="site-footer-end">
+
+        <div class="print"><p>https://ingecole.fr</p></div>
+    </div> <!-- fin de footer-end -->
+
+
+    <script>jQuery(document).ready(function($) {
+            $('.megamenu').accessibleMegaMenu();
+            setTimeout(function () {
+                $('body').removeClass('init');
+            }, 500);
+            if(typeof autosize !== 'undefined') autosize(jQuery('.autosize'));
+        });</script>
+
+
+
+
+    <div><div class="" style="display: block; opacity: 0.52;" id="pageShadowLuminositeDiv"></div></div>
+{% endblock %}

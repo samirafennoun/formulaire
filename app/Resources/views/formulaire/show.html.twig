@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formulaire</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ formulaire.id }}</td>
+            </tr>
+            <tr>
+                <th>Question1</th>
+                <td>{{ formulaire.question1 }}</td>
+            </tr>
+            <tr>
+                <th>Question2</th>
+                <td>{{ formulaire.question2 }}</td>
+            </tr>
+            <tr>
+                <th>Question3</th>
+                <td>{{ formulaire.question3 }}</td>
+            </tr>
+            <tr>
+                <th>Question4</th>
+                <td>{{ formulaire.question4 }}</td>
+            </tr>
+            <tr>
+                <th>Question5</th>
+                <td>{{ formulaire.question5 }}</td>
+            </tr>
+            <tr>
+                <th>Question6</th>
+                <td>{{ formulaire.question6 }}</td>
+            </tr>
+            <tr>
+                <th>Question7</th>
+                <td>{{ formulaire.question7 }}</td>
+            </tr>
+            <tr>
+                <th>Question8</th>
+                <td>{{ formulaire.question8 }}</td>
+            </tr>
+            <tr>
+                <th>Question9</th>
+                <td>{{ formulaire.question9 }}</td>
+            </tr>
+            <tr>
+                <th>Question10</th>
+                <td>{{ formulaire.question10 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('formulaire_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('formulaire_edit', { 'id': formulaire.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

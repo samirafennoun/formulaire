@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formulaires list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Question1</th>
+                <th>Question2</th>
+                <th>Question3</th>
+                <th>Question4</th>
+                <th>Question5</th>
+                <th>Question6</th>
+                <th>Question7</th>
+                <th>Question8</th>
+                <th>Question9</th>
+                <th>Question10</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formulaire in formulaires %}
+            <tr>
+                <td><a href="{{ path('formulaire_show', { 'id': formulaire.id }) }}">{{ formulaire.id }}</a></td>
+                <td>{{ formulaire.question1 }}</td>
+                <td>{{ formulaire.question2 }}</td>
+                <td>{{ formulaire.question3 }}</td>
+                <td>{{ formulaire.question4 }}</td>
+                <td>{{ formulaire.question5 }}</td>
+                <td>{{ formulaire.question6 }}</td>
+                <td>{{ formulaire.question7 }}</td>
+                <td>{{ formulaire.question8 }}</td>
+                <td>{{ formulaire.question9 }}</td>
+                <td>{{ formulaire.question10 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('formulaire_show', { 'id': formulaire.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('formulaire_edit', { 'id': formulaire.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('formulaire_new') }}">Create a new formulaire</a>
+        </li>
+    </ul>
+{% endblock %}

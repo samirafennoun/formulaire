@@ -1,0 +1,4 @@
+services:
+#    fond_annonce.example:
+#        class: FOND\AnnonceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
